@@ -34,7 +34,11 @@ steps:
     majorVersion: '1'
     minorVersion: '0'
     patchVersion: '0'
- 
+
+- task: NuGetAuthenticate@0
+  inputs:
+    nuGetServiceConnections: 'Tailspin.SpaceGame.Web.ModelsNew'
+
 - task: NuGetCommand@2
   displayName: 'Publish NuGet package'
   inputs:
